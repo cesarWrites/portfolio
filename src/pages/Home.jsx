@@ -1,0 +1,21 @@
+import Navbar from '../components/Navbar';
+import About from '../components/About';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import Articles from '../components/Articles';
+import Footer from '../components/Footer';
+
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <About />
+      <Skills />
+      <Projects />
+      <Articles />
+      <Footer />
+    </>
+  );
+}
+
+export default Home;

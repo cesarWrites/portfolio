@@ -1,0 +1,222 @@
+/* index.css */
+
+:root {
+  --dark-blue: #0a192f;
+  --navy: #112240;
+  --white: #ccd6f6;
+  --light-blue: #64ffda;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-family: var(--font-main);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--light-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--navy);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+/* About Section */
+/* .about {
+  text-align: center;
+  width: fit-content;
+  padding: 5%;
+  width: 100%;
+  background-color: grey;
+} */
+/* #about{
+  background-color: yellow;
+  width: 10vh;
+  width: 100%;
+} */
+
+/* .about p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+} */
+.about-section {
+  position: relative;
+  background-image: url('/src/assets/bg-image1.jpeg'); /* Adjust the path */
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 20pt;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent grey overlay */
+  z-index: 0;
+}
+
+.about-section h2,
+.about-section p {
+  position: relative;
+  z-index: 1;
+}
+
+.about-section p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Skills Grid */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.skills div {
+  background: var(--navy);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skills div:hover {
+  transform: scale(1.05);
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* Project Cards */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--navy);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.1);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: var(--light-blue);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* Articles */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.article-card {
+  background-color: var(--navy);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  background-color: rgba(100, 255, 218, 0.08);
+  transform: scale(1.03);
+}
+
+/* Resume Link */
+.resume-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+  color: var(--light-blue);
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: white;
+  background-color: var(--navy);
+  margin-top: 60px;
+  width: 5vh;
+  background-color: rgb(124, 120, 120);
+  width: 100%;
+}
