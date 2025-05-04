@@ -1,18 +1,55 @@
 function Skills() {
-    const skills = ['JavaScript', 'React', 'Node.js', 'HTML', 'CSS', 'Git'];
-    return (
-      <section id="skills" className="p-8">
-        <h2 className="text-3xl font-semibold mb-4">Skills</h2>
-        <div className="flex flex-wrap gap-4">
-          <h2>Programming: 
-          {skills.map((skill, idx) => (
-            <span key={idx} className="px-4 py-2 bg-accent text-white rounded-full">{skill}</span>
-          ))}
-          </h2>
+  return (
+    <section id="skills" className="skills-section">
+      <h2>Skills</h2>
+      <div className="skills-grid">
+        <div className="skill-area">
+          <h3>Data</h3>
+          <ul>
+            <li>SQL</li>
+            <li>BigQuery</li>
+            <li>Excel</li>
+            <li>Data Studio</li>
+            <li>MS SQL Server</li>
+          </ul>
         </div>
-      </section>
-    );
-  }
-  
-  export default Skills;
-  
+        <div className="skill-area">
+          <h3>Programming</h3>
+          <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div className="skill-area">
+          <h3>AI / ML</h3>
+          <ul>
+            <li>TensorFlow</li>
+            <li>Scikit-learn</li>
+            <li>Hugging Face</li>
+            <li>NLTK</li>
+          </ul>
+        </div>
+        <div className="skill-area">
+          <h3>Cloud</h3>
+          <ul>
+            <li>GCP</li>
+            <li>AWS</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+        <div className="skill-area">
+          <h3>Automations</h3>
+          <ul>
+            <li>Robotic Process Automations</li>
+            <li>Google AppScripts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Skills;

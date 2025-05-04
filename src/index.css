@@ -20,16 +20,19 @@ html, body {
   color: var(--white);
   font-family: var(--font-main);
   scroll-behavior: smooth;
+  color: #ffffff;
 }
 
 a {
   color: var(--light-blue);
   text-decoration: none;
   transition: color 0.3s ease;
+  color: #ffffff;
+  
 }
 
 a:hover {
-  color: #ffffff;
+  color: #551A8B;
 }
 
 section {
@@ -52,6 +55,7 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 100;
+  color: #ffffff;
 }
 
 .navbar a {
@@ -78,7 +82,7 @@ h1, h2, h3 {
   margin: auto;
   line-height: 1.6;
 } */
-.about-section {
+#about-section {
   position: relative;
   background-image: url('/src/assets/bg-image1.jpeg'); /* Adjust the path */
   background-size: cover;
@@ -92,7 +96,7 @@ h1, h2, h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.about-section::before {
+#about-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -103,13 +107,13 @@ h1, h2, h3 {
   z-index: 0;
 }
 
-.about-section h2,
-.about-section p {
+#about-section h2,
+#about-section p {
   position: relative;
   z-index: 1;
 }
 
-.about-section p {
+#about-section p {
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 1.7;
@@ -120,24 +124,57 @@ h1, h2, h3 {
 
 
 /* Skills Grid */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
+.skills-section {
+  padding: 60px 20px;
+  background-color: #0d1b2a; /* dark blue */
+  color: #ffffff;
   text-align: center;
 }
 
-.skills div {
-  background: var(--navy);
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #f8f9fa;
 }
 
-.skills div:hover {
-  transform: scale(1.05);
-  background-color: rgba(100, 255, 218, 0.1);
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+.skill-area {
+  background-color: rgba(255, 255, 255, 0.05); /* transparent white for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.skill-area h3 {
+  font-size: 1.5rem;
+  color: #4fc3f7; /* light blue */
+  margin-bottom: 15px;
+}
+
+.skill-area ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-area li {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
 
 /* Project Cards */
 .projects {
@@ -161,7 +198,7 @@ h1, h2, h3 {
 
 .project-card h3 {
   margin-bottom: 10px;
-  color: var(--light-blue);
+  color:#4fc3f7;
 }
 
 .project-card a {
@@ -169,6 +206,7 @@ h1, h2, h3 {
   margin-top: 10px;
   margin-right: 15px;
   font-size: 14px;
+  color: #551A8B;
 }
 
 /* Articles */
@@ -208,15 +246,65 @@ h1, h2, h3 {
 }
 
 
-/* Footer */
 .footer {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: white;
-  background-color: var(--navy);
-  margin-top: 60px;
-  width: 5vh;
-  background-color: rgb(124, 120, 120);
-  width: 100%;
 }
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+.socials h3,
+.contact-form h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #4fc3f7;
+}
+
+.socials a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #4fc3f7;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #4fc3f7;
+  border: none;
+  border-radius: 5px;
+  color: #0d1b2a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #29b6f6;
+}
+

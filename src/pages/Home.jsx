@@ -10,8 +10,8 @@ function Home() {
     <>
       <Navbar />
       <About />
-      <Skills />
       <Projects />
+      <Skills />
       <Articles />
       <Footer />
     </>

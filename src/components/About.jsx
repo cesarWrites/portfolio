@@ -1,6 +1,6 @@
 function About() {
     return (
-      <section className="about-section">
+      <section id="about-section">
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="text-lg max-w-3xl">
         I am a self-driven software engineer with a strong passion for building data- driven solutions that optimize processes and drive better outcomes for organizations. 
